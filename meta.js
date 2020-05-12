@@ -1,9 +1,13 @@
+'use strict'
+const path = require('path')
+const fs = require('fs')
 const {
-    sortDependencies,
-    installDependencies,
-    runLintFix,
-    printMessage,
-  } = require('./utils')
+  sortDependencies,
+  installDependencies,
+  runLintFix,
+  printMessage,
+  runScript
+} = require('./utils')
 
 module.exports = {
     /**
