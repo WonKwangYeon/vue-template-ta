@@ -36,7 +36,7 @@ module.exports = {
     /**
      * You can add a custom complete message
      */
-    complete: async function(data, {
+    complete: function(data, {
         chalk
       }) {
         const green = chalk.green
