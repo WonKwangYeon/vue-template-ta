@@ -1,3 +1,9 @@
+{{ name }}
+===
+> Your README Description!
+
+{{ description }}
+
 # vue-template-ta
 
 ## Project setup
