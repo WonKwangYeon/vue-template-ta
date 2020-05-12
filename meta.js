@@ -19,7 +19,6 @@ module.exports = {
         message: 'Author'
       },
       moment: {
-          when: 'isNotTest',
           type: 'confirm',
           message : 'Install vue-moment?'
       }
