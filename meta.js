@@ -21,7 +21,16 @@ module.exports = {
       moment: {
           type: 'confirm',
           message : 'Install vue-moment?'
+      },
+      bootstrap: {
+          type: 'confirm',
+          message : 'Install vue-bootstrap?'
+      },
+      fontAwesome: {
+          type: 'confirm',
+          message : 'Install font-awesome?'
       }
+    
     },
   
     /**
