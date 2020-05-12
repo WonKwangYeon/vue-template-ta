@@ -4,7 +4,4 @@
 2. npm i -g @vue/cli-init
 
 
-3. npm i -g @vue/cli-init
-
-
-4. vue init wonkwangyeon/vue-template-ta 'project-name'
+3. vue init wonkwangyeon/vue-template-ta 'project-name'
