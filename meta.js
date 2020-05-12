@@ -12,7 +12,7 @@ module.exports = {
         type: 'string',
         required: false,
         message: '',
-        default: 'My Awesome Project'
+        default: 'Project'
       },
       author: {
         type: 'string',
@@ -36,5 +36,38 @@ module.exports = {
     /**
      * You can add a custom complete message
      */
-    completeMessage: 'Project Complete!'
+    complete: async function(data, {
+        chalk
+      }) {
+        const green = chalk.green
+    
+        sortDependencies(data, green)
+        const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
+    
+        // if(data.needCertGenerate) {
+        //   await runScript('generate_cert.sh')
+        // }
+    
+        if (data.autoInstall) {
+          installDependencies(cwd, data.autoInstall, green)
+            .then(() => {
+              return runLintFix(cwd, data, green)
+            })
+            .then(() => {
+              printMessage(data, green)
+            })
+            .catch(e => {
+              console.log(chalk.red('Error:'), e)
+            })
+        } else {
+          printMessage(data, chalk)
+        }
+        console.log([
+          '\n---',
+          '',
+          'Project Complete!',
+          '',
+ 
+        ].join('\n'))
+      }
   };
