@@ -17,6 +17,11 @@ module.exports = {
       author: {
         type: 'string',
         message: 'Author'
+      },
+      moment: {
+          when: 'isNotTest',
+          type: 'confirm',
+          message : 'Install vue-moment?'
       }
     },
   
