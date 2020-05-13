@@ -6,7 +6,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    {{#lint}}
     "lint": "vue-cli-service lint"
+    {{/lint}}
   },
   "dependencies": {
     {{#fontAwesome}}"@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -23,11 +25,27 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
+    {{#lint}}
+    "@vue/cli-plugin-eslint": "~4.2.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^6.1.2",
+    {{#if_eq lintConfig "standard"}}
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    {{/if_eq}}
+    {{#if_eq lintConfig "airbnb"}}
+    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-import": "^2.7.0",
+    {{/if_eq}}
+    {{/lint}}
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
