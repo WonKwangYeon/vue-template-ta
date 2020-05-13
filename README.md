@@ -7,7 +7,7 @@
 
 ## Documentation
 
-- [For Vue](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
+- [For Vue](http://vuejs.org/guide/) : general information about how to work with Vue, not specific to this template
 
 ## Usage
 
@@ -21,14 +21,6 @@ $ npm install
 $ cd 'project-name'
 $ npm run dev
 ```
-
-This will scaffold the project using the `master` branch. If you wish to use the latest version of the webpack template, do the following instead:
-
-``` bash
-$ vue init webpack#develop my-project
-```
-
-
 
 ## What's Included
 
