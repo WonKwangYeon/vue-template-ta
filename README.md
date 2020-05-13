@@ -1,6 +1,6 @@
 # vue-template-ta
 
-> TA Frameworksection template
+> TA Framework Section template
 
 > This template is Vue 3.0 compatible.
 
