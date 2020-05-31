@@ -1,7 +1,5 @@
 # vue-template-ta
 
-> TA Framework Section template
-
 > This template is Vue 3.0 compatible.
 
 
