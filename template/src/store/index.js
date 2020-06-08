@@ -1,45 +1,46 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import constants from "../constants";
-import axios from "axios";
+import Vue from 'vue'
+import Vuex from 'vuex'
+import constants from '../constants'
+import axios from 'axios'
 
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true
+
 const request = axios.create({
-  baseURL : "URL", 
+  baseURL: process.env.NODE_ENV !== 'production' ? '개발용주소' : '배포용주소',
   timeout: 2000
-});
-Vue.use(Vuex);
+})
+Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
     example: []
   },
   getters: {
-    getExample(state) {
-      return state.example;
+    getExample (state) {
+      return state.example
     }
   },
   mutations: {
-    setExample(state, payload) {
-        state.example = payload;
+    setExample (state, payload) {
+      state.example = payload
     }
   },
   actions: {
-    async getExampleApi(context) {
+    async getExampleApi (context) {
       try {
-        context.state.example = [];
+        context.state.example = []
         const { data } = await request.get(constants.api.example)
 
         if (data.length > 0) {
-          context.commit("setExample", data);
+          context.commit('setExample', data)
         }
       } catch (e) {
         console.log(e)
       }
     },
-    async setExampleApi(context, example) {
+    async setExampleApi (context, example) {
       try {
-        const { status } = await request.post(constants.api.example, example);
+        const { status } = await request.post(constants.api.example, example)
         if (status === 200) {
           context.commit()
         }
@@ -47,9 +48,9 @@ const store = new Vuex.Store({
         console.log(e)
       }
     },
-    async updateExampleApi(context) {
+    async updateExampleApi (context) {
       try {
-        const { status } = await request.put(constants.api.example);
+        const { status } = await request.put(constants.api.example)
         if (status === 200) {
           context.commit()
         }
@@ -57,16 +58,16 @@ const store = new Vuex.Store({
         console.log(e)
       }
     },
-    async deleteExampleApi(context) {
+    async deleteExampleApi (context) {
       try {
-        const { status } = await request.delete(constants.api.example);
+        const { status } = await request.delete(constants.api.example)
         if (status === 200) {
-          context.commit()          
+          context.commit()
         }
       } catch (e) {
         console.log(e)
       }
     }
   }
-});
-export default store;
+})
+export default store

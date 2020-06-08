@@ -1,7 +1,7 @@
 <template>
   <div>
   <default-layout>
-    Hello World
+    Test World
   </default-layout>
   </div>
 </template>

@@ -1,0 +1,384 @@
+.login-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  min-height: 700px;
+}
+
+.login-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 12%;
+  height: 70vh;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #0000000f;
+  border-radius: 4px;
+  width: 30vw;
+  min-width: 450px;
+  min-height: 600px;
+}
+
+.btn-user-id-check {
+  padding: unset !important;
+  height: auto;
+  width: 80px;
+  font-size: 15px !important;
+  position: relative;
+  left: 80%;
+  top: -64px;
+}
+
+body.login {
+  background: url("../login_Background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 700px;
+  min-width: 600px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: url("../login_Background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 700px;
+  min-width: 600px;
+  z-index: -1;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+}
+*/
+.input-id-pw-form input::placeholder {
+  color: #5b5b5b;
+  font: Regular 16px/45px Arial;
+}
+
+.logo-description {
+  top: 354px;
+  left: 370px;
+  width: 270px;
+  height: 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 13px;
+  font-family: Arial;
+  letter-spacing: 0;
+  color: #8a8a8a;
+  opacity: 1;
+}
+
+.copyright {
+  top: 899px;
+  left: 392px;
+  width: 226px;
+  height: 15px;
+  text-align: center;
+  font: Regular 11px/13px Arial;
+  letter-spacing: 0;
+  color: #b8b8b8;
+  opacity: 1;
+}
+
+.login-2 {
+  flex: 15;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  margin-top: 30px;
+  font: 30px/35px "Malgun Gothic";
+  color: red;
+}
+
+.copyright-2 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.input-id-pw {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #dfdfdf;
+  border-top: none;
+  margin-bottom: 20px;
+}
+
+.input-signIn-form {
+  width: 60%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #dfdfdf;
+  border-top: none;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.btn-prev {
+  height: 35px;
+  background-size: 10px 35px;
+  border: none;
+}
+
+.display-flex {
+  display: flex;
+}
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.w-185px {
+  width: 185px;
+}
+.flex-none {
+  flex: none;
+}
+
+.display-flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ta-btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 16px;
+  font-family: Malgun Gothic;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ta-btn.disabled,
+.ta-btn:disabled {
+  cursor: unset;
+  opacity: 0.65;
+}
+
+.ta-btn-danger {
+  background-color: #e53e3e;
+  border: 1px solid #e53e3e;
+  color: white;
+}
+
+.ta-btn-danger:focus {
+  outline: unset;
+  border: 1px solid #e53e3e;
+}
+
+.ta-btn-default {
+  border: 1px solid #c5c5c5;
+  background-color: white;
+  color: #5b5b5b;
+}
+
+.ta-btn-default:focus {
+  border: 1px solid #c5c5c5;
+  outline: unset;
+}
+
+.ta-btn-neutral {
+  background-color: #62667a;
+  border: 1px solid #62667a;
+  color: white;
+}
+
+.ta-btn-neutral:focus {
+  outline: unset;
+  border: 1px solid #62667a;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.pwdVaild {
+  color: red;
+  font-size: 14px;
+}
+
+/***** magin-top list *****/
+.mg-t-m30px {
+  margin-top: -30px;
+}
+
+.mg-t-m15px {
+  margin-top: -15px;
+}
+
+.mg-t-10px {
+  margin-top: 10px;
+}
+
+.mg-t-10 {
+  margin-top: 10%;
+}
+
+.mg-t-30px {
+  margin-top: 30px;
+}
+
+/***** magin-bottom list *****/
+.mg-b-10 {
+  margin-bottom: 10%;
+}
+
+.mg-b-30 {
+  margin-bottom: 30%;
+}
+
+.mg-b-36_5 {
+  margin-bottom: 36.5%;
+}
+
+.mg-b-m20px {
+  margin-bottom: -20px;
+}
+
+.mg-b-20px {
+  margin-bottom: 20px;
+}
+
+.mg-b-20 {
+  margin-bottom: 20%;
+}
+
+.mg-b-10px {
+  margin-bottom: 10px;
+}
+
+.mg-b-5px {
+  margin-bottom: 5px;
+}
+/***** magin-right list *****/
+.mg-r-5px {
+  margin-right: 5px;
+}
+
+/***** margin-left list *****/
+.mg-l-40px {
+  margin-left: 40px;
+}
+
+.mg-l-10px {
+  margin-left: 10px;
+}
+
+.mg-l-m16px {
+  margin-left: -16px;
+}
+
+.mg-l-15px {
+  margin-left: 15px;
+}
+
+.mg-l-5px {
+  margin-left: 5px;
+}
+
+/***** width list *****/
+.w-95vw {
+  width: 95vw;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-97 {
+  width: 97%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-60px {
+  width: 60px;
+}
+
+.w-30px {
+  width: 30px;
+}
+/***** height list *****/
+.h-100 {
+  height: 100%;
+}
+
+.h-550px {
+  height: 550px;
+}
+
+.h-50px {
+  height: 50px;
+}
+
+.h-35px {
+  height: 35px;
+}
+
+.h-30px {
+  height: 30px;
+}
